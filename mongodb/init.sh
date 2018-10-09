@@ -1,4 +1,8 @@
 #!/bin/bash
+
+INIT_DUMP=account-service-dump.js
+MONGODB_PASSWORD=admin
+
 if test -z "$MONGODB_PASSWORD"; then
     echo "MONGODB_PASSWORD not defined"
     exit 1
