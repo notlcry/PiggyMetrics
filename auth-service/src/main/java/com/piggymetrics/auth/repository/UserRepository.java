@@ -4,7 +4,10 @@ import com.piggymetrics.auth.domain.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepository extends CrudRepository<User, String> {
+import java.util.Optional;
 
+
+@Repository
+public interface UserRepository extends CrudRepository<User, Long> {
+    Optional<User> findByUsername(String name);
 }

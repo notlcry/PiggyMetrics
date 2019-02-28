@@ -43,7 +43,7 @@ public class UserServiceTest {
 		user.setUsername("name");
 		user.setPassword("password");
 
-		when(repository.findById(user.getUsername())).thenReturn(Optional.of(new User()));
+		when(repository.findByUsername(user.getUsername())).thenReturn(Optional.of(new User()));
 		userService.create(user);
 	}
 }
